@@ -1,5 +1,5 @@
 import React from 'react';
-import './Input';
+import './Input.css';
 
 function isInvalid({ valid, touched, shouldValidate}) {
     return !valid && shouldValidate && touched;
@@ -15,7 +15,7 @@ const Input = props => {
     }
 
     return (
-        <div className={cls.join(' ')}>
+        <div className="Input">
             <label htmlFor={htmlFor}>{props.label}</label>
             <input 
             type={inputType}

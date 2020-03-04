@@ -6,6 +6,9 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import loginReducer from './components/reducer/loginPageReducer';
+const usersRouter = require('./backend/express.js');
+const apiRouter = require('./backend/apiRouter');
+const { createSqlConnection } = require('./backend//user');
 
 const initialstate = {
     users: [],

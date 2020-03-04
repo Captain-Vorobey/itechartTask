@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import Input from '../UI/Input/Input';
-import { Form, Button } from 'react-bootstrap';
-import { connect } from 'react-redux';
 //import { Form, Button } from 'react-bootstrap';
-import './LoginPage';
+import { connect } from 'react-redux';
+import './LoginPage.css';
 import is from 'is_js';
 
 class LoginPage extends React.Component {
@@ -119,7 +118,7 @@ onChangeHandler = (event, controlName) => {
             <div className="LoginPage">
                 <h1>Авторизоваться</h1>
 
-                <form onClick={this.submitHandler} className="LoginForm">
+                <form method="POST" onClick={this.submitHandler} className="LoginForm">
                     
                         {this.renderInputs()}
 
