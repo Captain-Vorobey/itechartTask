@@ -4,6 +4,7 @@ import Input from '../UI/Input/Input';
 import { connect } from 'react-redux';
 import './LoginPage.css';
 import is from 'is_js';
+import { OnSecondPageButton } from './onLoginPage';
 
 class LoginPage extends React.Component {
     

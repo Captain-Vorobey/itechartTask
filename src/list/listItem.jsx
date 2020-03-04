@@ -1,4 +1,4 @@
-import react, { Component } from 'react';
+import react from 'react';
 
 function ListItem(props) {
     return <li>{props.value}</li>;
@@ -15,3 +15,5 @@ function ListItem(props) {
       </ul>
     );
   }
+
+  export default NumberList;
