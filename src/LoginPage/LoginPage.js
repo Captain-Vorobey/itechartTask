@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import './LoginPage.css';
 import is from 'is_js';
 import { OnSecondPageButton } from './onLoginPage';
+import axios from 'axios';
 
 class LoginPage extends React.Component {
     
@@ -44,6 +45,28 @@ class LoginPage extends React.Component {
 
     submitHandler = event => {
         event.preventDefault();
+    if(this.state.login !== "" && this.state.password !== ""){
+      axios.post('/api/users/login',{
+        login: `${this.state.login}`,
+        password: `${this.state.password}`
+      })
+      .then(res => {
+        console.log(res);
+        if(res.data === "success"){
+          this.setState({
+            isLogin: true,
+          });
+          this.props.login({
+            login: this.state.login,
+            password: this.state.password
+          });
+        }
+        else {
+          this.setState({isLoginAlert: true})
+        }
+      })
+      .catch(e => console.error(`Problem with axios: ${e.message}`))
+    }
     };
 
     validateControl(value, validation) {
