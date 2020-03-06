@@ -1,16 +1,27 @@
-import constants from '../constants';
+const {type} = require('../actions/constants');
 
-const loginReducer = (state = [], action) => {
-    switch(action.type) {
-        case constants.LOG_IN:
-            return {...state.users, isAuthorizated: true};
+const loginReducer = (state, action) => {
+  switch (action.type) {
+    case type.LOGIN:
+      return { account: action.account, isAuthorizated: true };
 
-            case constants.LOG_OUT:
-                return { ...state.users, isAuthorizated: false };
+    case type.LOGOUT:
+      return { account: "", isAuthorizated: false };
 
-            default:
-                return state;
-    }
-};
+    case type.TOGGLE_TOOLBAR_EL:
+        return { toolbarItems: state.toolbarItems.map(el => {
+            if(el.id == action.id) {
+                el.isActive = true;
+            }
+                else {
+                    el.isActive = false;
+                }
+            return el;
+        }) }
+
+    default:
+      return state;
+  }
+}
 
 export default loginReducer;

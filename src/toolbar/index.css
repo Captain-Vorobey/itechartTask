@@ -1,7 +1,0 @@
-.Toolbar {
-    width: 100vw;
-    height: 59px;
-
-    display: flex;
-    flex-flow: row nowrap;
-}

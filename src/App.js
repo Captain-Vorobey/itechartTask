@@ -6,7 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import LoginPage from './LoginPage/LoginPage';
-import Toolbar from './toolbar/index';
+import Toolbar from '../src/toolbar/toolbar/toolbar';
 
 function AboutLogin() {
   return <LoginPage/>;
@@ -16,10 +16,10 @@ function AboutHello() {
   return <Toolbar/>;
 }
 
-export default function App() {
-  return (
-    <div>
-      <Toolbar/>
-    </div>
-);
+  export default function App() {
+    return (
+      <div>
+        <Toolbar/>
+      </div>
+  );
 }
