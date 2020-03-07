@@ -13,123 +13,122 @@ const initialState = {
     {
       id: 0,
       toolName: "Рабочий стол",
-      src: {},
+      src: './images/bi.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 1,
       toolName: "Справочники",
-      src: {},
+      src: './images/chat.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 2,
       toolName: "Закупки",
-      src: {},
+      src: './images/customs.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 3,
       toolName: "Склад",
-      src: {},
+      src: './images/dashboard.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 4,
       toolName: "Продажи",
-      src: {},
+      src: './images/finance.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 5,
       toolName: "Розничная торговля",
-      src: {},
+      src: './images/form.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 6,
       toolName: "Финансы",
-      src: {},
+      src: './images/lock.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 7,
       toolName: "Цена",
-      src: {},
+      src: './images/machinery.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 8,
       toolName: "Оборудование",
-      src: {},
+      src: './images/manufacturing.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 9,
       toolName: "Транспорт",
-      src: {},
+      src: './images/open.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 10,
       toolName: "ВЭД",
-      src: {},
+      src: './images/priceList.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 11,
       toolName: "Производство",
-      src: {},
+      src: './images/purchase.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 12,
       toolName: "WMS",
-      src: {},
+      src: './images/retail.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 13,
       toolName: "Чат",
-      src: {},
+      src: './images/sale.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 14,
       toolName: "Учетная запись",
-      src: {},
+      src: './images/search.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 15,
       toolName: "Поиск",
-      src: {},
+      src: './images/stock.png',
       alt: "dashboard",
       isActive: false
     },
     {
       id: 16,
-      toolName: "BI",
-      src: {},
+      toolName: "WMS",
+      src: './images/wms.png',
       alt: "dashboard",
       isActive: false
-    },
-
+    }
   ],
   profile: {
     account: {
