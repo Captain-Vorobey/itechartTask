@@ -17,6 +17,7 @@ class Toolbar extends React.Component {
   }
   render(){
     const items = this.state.toolbarItems.map(el => <ToolbarItem src = {el.src}
+                                                                    key={el.id}
                                                                     toolName = {el.toolName}
                                                                     alt = {el.alt}
                                                                     isActive = {el.isActive}

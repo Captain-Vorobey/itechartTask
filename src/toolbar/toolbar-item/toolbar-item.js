@@ -1,20 +1,16 @@
 import React from 'react';
 import './toolbar-item.css'
-import s from './images/bi.png'
 import { toggleToolbarEl } from '../../components/actions/actions';
 import { connect } from 'react-redux';
 
-class Toolbar__item extends React.Component {
-
-  render(){
-    const { toolName, toolbarItemClicked} = this.props;
+const ToolbarItem = props => {
+    const { toolName, changeActive, alt, src } = props;
     return(
-      <div className = "toolbar-item" onClick = {() => this.props.changeActive(this.props.id)}>
-        <img src={s} alt={this.props.alt}/>
+      <div className = "toolbar-item" onClick = {() => changeActive(props.id)}>
+        <img src={src} alt={alt}/>
         <p>{toolName}</p>
       </div>
     );
-  }
 }
 
 const mapDispatchToProps = (dispath) => ({
@@ -23,4 +19,4 @@ const mapDispatchToProps = (dispath) => ({
   }
 })
 
-export default connect(null, mapDispatchToProps)(Toolbar__item);
+export default connect(null, mapDispatchToProps)(ToolbarItem);
