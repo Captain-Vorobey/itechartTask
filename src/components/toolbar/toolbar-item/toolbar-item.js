@@ -1,6 +1,6 @@
 import React from 'react';
 import './toolbar-item.css'
-import { toggleActiveToolbarEl } from '../../actions/actions';
+import { toggleActiveToolbarEl } from '../../../actions/actions';
 import { connect } from 'react-redux';
 
 const ToolbarItem = props => {

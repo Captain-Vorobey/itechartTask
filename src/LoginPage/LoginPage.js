@@ -45,7 +45,7 @@ class LoginPage extends React.Component {
 
     submitHandler = event => {
         event.preventDefault();
-    if(this.state.login !== "" && this.state.password !== ""){
+        if(this.state.login !== "" && this.state.password !== ""){
       axios.post('/api/users/login',{
         login: `${this.state.login}`,
         password: `${this.state.password}`
@@ -87,9 +87,6 @@ class LoginPage extends React.Component {
     if(validation.minLength) {
         isValid = value.length >=  validation.minLength && isValid;
     }
-
-        
-
         return isValid;
     }
 

@@ -1,25 +1,27 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 import LoginPage from './LoginPage/LoginPage';
-import Toolbar from '../src/toolbar/toolbar/toolbar';
+import { connect } from 'react-redux';
+import Toolbar from './toolbar/toolbar/toolbar';
+import Sidebar from './sidebar/sidebar/sidebar';
 
-function AboutLogin() {
-  return <LoginPage/>;
-}
-
-function AboutHello() {
-  return <Toolbar/>;
-}
-
-  export default function App() {
+class App extends React.Component {
+  render(){
+    let login = <LoginPage/>;
+    let toolbar = null;
+    if(this.props.profile.isAuthorizated){
+      login = null;
+      toolbar = <Toolbar/>;
+    }
     return (
-      <div>
-        <Toolbar/>
-      </div>
-  );
+      <>
+        {login}
+        {toolbar}
+        <Sidebar />
+      </>
+    );
+  };
 }
+
+const mapStateToProps = (store) => ({profile: store.profile});
+
+export default connect(mapStateToProps)(App);
